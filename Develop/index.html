@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head tag for declaration of document metadata tags, title and linked CSS style Sheet -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
+    <title>Bailey's Password Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="wrapper">
       <header>
@@ -27,6 +29,33 @@
           >
         </textarea>
         </div>
+        <!-- Password Length -->
+        <br>
+        <div>
+          <label for="length">Password Length</label>
+          <input type="number" id="length" min="8" max="128" value="10">
+        </div>
+
+        <!-- Checkboxes for the different types of characters -->
+        <div>
+          <label for="lowercase">Lowercase letters:</label>
+          <input type="checkbox" id="lowercase" checked>
+        </div>
+
+        <div>
+          <label for="Uppercase">Uppercase Letters:</label>
+          <input type="checkbox" id="Uppercase" checked>
+        </div>
+        <div>
+          <label for="Symbols">Symbols:</label>
+          <input type="checkbox" id="symbols" checked>
+        </div>
+
+        <div>
+          <label for="numbers">Numbers:</label>
+          <input type="checkbox" id="symbols" checked>
+        </div>
+
         <div class="card-footer">
           <!-- Generate Password Button -->
           <button id="generate" class="btn">Generate Password</button>
