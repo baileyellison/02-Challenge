@@ -1,12 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-  const types = { 
-    lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
-    uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    numberCharacters = "0123456789";
-    symbolCharacters = " !@#$%&*'()+-,./:;<>=?{}[]~_`|";
+  const types = {
+    lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz"
+    uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    numberCharacters = "0123456789"
+    symbolCharacters = " !@#$%&*'()+-,./:;<>=?{}[]~_`|"
   }
+
+  let includedCharacters = "";
+  let password = "";
 
   const getTypes = {
     function lowercaseCharacters() {
@@ -35,9 +38,9 @@ var generateBtn = document.querySelector("#generate");
   // Write password to the #password input
 function writePassword() {
   let uppercase = document.getElementById("Uppercase").checked;
-  let lowercase = document.getElementById("lowercase").checked;
-  let numbers= document.getElementById("numbers").checked;
-  let symbols = document.getElementById("symbols").checked;
+  let lowercase = document.getElementById("Lowercase").checked;
+  let numbers= document.getElementById("Numbers").checked;
+  let symbols = document.getElementById("Symbols").checked;
 
   if(numbers + symbols + lowercase + uppercase === 0) {
     window.alert("No characters have been chosen to generate your password. Please check at least one box")
@@ -51,14 +54,16 @@ function writePassword() {
     window.alert("Password length must be between 8 and 128 characters.")
   }
 
-  let includedCharacters = getType[Math.floor(Math.random() * getType.length)];
-  let checkedCharacters = document.getElementById(includedCharacters.name).checked;
+  for(let i = 0; i < length; i++) {
+    const RandomIndex = Math.floor(Math.random() * includedCharacters.length)
+  }
 
   if(checkedCharacters) {
-    password += includedCharacters();
+    password += includedCharacters(RandomIndex);
   }
-  document.writePassword
 }
+
+return password;
 
 
 // Arguments to pass
