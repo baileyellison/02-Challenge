@@ -11,11 +11,17 @@ var symbolCharacters = [" ", "!", "@", "#", "$", "%", "&", "*", "'", "(", ")", "
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Generating the password after the given criteria has been met
 function generatepassword() {
 
-
-  return "Generated password!"
+var password = "";
+for(var i = 0; i < passwordLength; i++) {
+      var randomIndex = Math.floor(Math.random() * includedCharacters.length);
+      password = password + includedCharacters[randomIndex];
+    }
+    return password
 }
+
 
 // All met criteria the user has to meet before the password is displayed
 function getCriteria() {
@@ -60,11 +66,14 @@ function getCriteria() {
 
 // write password to the #password input
 function writePassword() {
-  
-  var password = generatepassword();
+  var rightCriteria = getCriteria();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  if(rightCriteria) {
+  var randomPassword = generatepassword();
+  passwordText.value = randomPassword;
+  } 
+  
 
 }
 
@@ -117,9 +126,7 @@ generateBtn.addEventListener("click", writePassword);
 //     window.alert("Password length must be between 8 and 128 characters.")
 //   }
 
-//   for(let i = 0; i < length; i++) {
-//     const RandomIndex = Math.floor(Math.random() * includedCharacters.length)
-//   }
+//   
 
 //   let password = document.getElementById("password");
 //   let length = document.getElementById("length");
