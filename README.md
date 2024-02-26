@@ -10,7 +10,7 @@ In JavaScript a for loop, if statements and different logistical functions were 
 
 ![The password generator will look as such when deployed".](./Assets/03-javascript-homework-demo.png)
 
-Deployed link: 
+Deployed link: https://baileyellison.github.io/Password-Generator-Code-Refractor/
 
 ## Installation
 N/A
